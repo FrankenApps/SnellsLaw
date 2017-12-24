@@ -1,0 +1,27 @@
+html, body{
+  background-color: #ffffff;
+  height: 100%
+}
+
+.menu {
+	position:fixed;
+	width:250px; height:270px;
+	top:30px; right: 10px;
+	background: rgba(255,255,255,0.75);
+}
+
+a{
+  cursor: pointer;
+}
+
+.display {
+  position:fixed;
+	width:120px; height:80px;
+	top:10px; left: 20px;
+  font-size: 1.4em;
+	background: rgba(255,255,255,0.75);
+}
+
+#dragPoint{
+  cursor: pointer;
+}

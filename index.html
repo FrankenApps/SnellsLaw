@@ -1,0 +1,104 @@
+<!DOCTYPE HTML5 PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Snells Law</title>
+  <link rel="shortcut icon" type="image/png" href="res/logo.png">
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div class="menu">
+    <!-- First  -->
+    <div class="form-group" title="Values are just for demonstration purpose. No responsibility can be taken for this information.">
+           <label for="inpuFname">n&#x2081;:</label>
+           <div class="input-group">
+             <div class="input-group-btn bs-dropdown-to-select-group" id="n1" >
+                 <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select" data-toggle="dropdown">
+                     <span data-bind="bs-drp-sel-label">Select...</span>
+                     <input type="hidden" name="selected_value" data-bind="bs-drp-sel-value" value="">
+                     <span class="caret"></span>
+                     <span class="sr-only">Toggle Dropdown</span>
+                 </button>
+                 <ul class="dropdown-menu" role="menu">
+                     <li data-value="1"><a>Vacuum</a></li>
+                     <li data-value="2"><a>Air (under STP)</a></li>
+                     <li data-value="3"><a>Water</a></li>
+                     <li data-value="4"><a>Ethanol</a></li>
+                     <li data-value="5"><a>Glycerol</a></li>
+                     <li data-value="6"><a>Acrylic Glass</a></li>
+                     <li data-value="7"><a>Borosilicate Glass</a></li>
+                     <li data-value="8"><a>Polystyrene</a></li>
+                     <li data-value="9"><a>Diamond</a></li>
+                     <li data-value="10"><a>Silicone</a></li>
+                     <li class="divider"></li>
+                     <li data-value="11"><a>Other</a></li>
+                 </ul>
+             </div>
+               <input type="text" value="" class="form-control" name="text" id="n1text">
+           </div>
+       </div>
+
+
+       <!-- Second  -->
+       <div class="form-group" title="Values are just for demonstration purpose. No responsibility can be taken for this information.">
+              <label for="inpuFname">n&#x2082;:</label>
+              <div class="input-group">
+                <div class="input-group-btn bs-dropdown-to-select-group" id="n2">
+                    <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select" data-toggle="dropdown">
+                        <span data-bind="bs-drp-sel-label">Select...</span>
+                        <input type="hidden" name="selected_value" data-bind="bs-drp-sel-value" value="">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="">
+                        <li data-value="s1"><a>Vacuum</a></li>
+                        <li data-value="s2"><a>Air (under STP)</a></li>
+                        <li data-value="s3"><a>Water</a></li>
+                        <li data-value="s4"><a>Ethanol</a></li>
+                        <li data-value="s5"><a>Glycerol</a></li>
+                        <li data-value="s6"><a>Acrylic Glass</a></li>
+                        <li data-value="s7"><a>Borosilicate Glass</a></li>
+                        <li data-value="s8"><a>Polystyrene</a></li>
+                        <li data-value="s9"><a>Diamond</a></li>
+                        <li data-value="s10"><a>Silicone</a></li>
+                        <li class="divider"></li>
+                        <li data-value="s11"><a>Other</a></li>
+                    </ul>
+                </div>
+                  <input type="text" value="" class="form-control" name="text" id="n2text">
+              </div>
+          </div>
+    <div class="form-group">
+      <label for="setAngle">Set Angle (relative to abscissa):</label>
+      <input type="text" class="form-control" id="setAngle">
+    </div>
+    <label>Play Animation:</label>
+    <div style="text-align: center">
+      <button class="btn btn-success" title="slower" id="slower"><img src="res/backward.png" width="13em" /></button>
+      <button class="btn btn-primary" title="pause" id="pause"><img src="res/pause.png" width="8em" /></button>
+      <button class="btn btn-primary" title="play" id="play"><img src="res/play.png" width="9em" /></button>
+      <button class="btn btn-primary" title="stop" id="stop"><img src="res/stop.png" width="12em" /></button>
+      <button class="btn btn-success" title="faster" id="faster"><img src="res/forward.png" width="13em" /></button>
+    </div>
+  </div>
+  <div class="display">
+    <span id="theta_1" style="color: green">&#x03B8;&#x2081; &#x2248; 0°</span><br />
+    <span id="theta_1_2" style="color: orange">&#x03B8;&#x2081;' &#x2248; 0°</span><br />
+    <span id="theta_2" style="color: blue">&#x03B8;&#x2082; &#x2248; 0°</span><br />
+  </div>
+
+</body>
+</html>
